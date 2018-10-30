@@ -4,6 +4,59 @@ Ubuntu16.04 下网页版微信，QQ
 微信：https://wx.qq.com/
 
 QQ：http://web2.qq.com/
+========================================================================================
+https://blog.csdn.net/u011006622/article/details/78788024?utm_source=blogxgwz2
+
+ 1、使用网页版，除了没有公众号之后，一切都没问题，包括传文件等。
+
+网页登录地址：https://wx.qq.com/
+
+2、使用第三方版本，只不过这个是桌面应用，原理是通过网页API集成的，稳定性还是可以的。
+
+网站：https://github.com/geeeeeeeeek/electronic-wechat/releases，离线版本：（链接: https://pan.baidu.com/s/1i5Dr15r 密码: rc93）
+
+其实不用担心安全的问题，因为微信在登录上本身就要扫码的。而对于聊天内容会上传第三方，这个可以开个抓包软件一抓就行了。如果还是不放心就使用网页版的。
+
+以下是安装过程：
+
+下载最新版本tar.gz压缩包https://github.com/geeeeeeeeek/electronic-wechat/releases/download/V2.0/linux-x64.tar.gz
+
+wget https://github.com/geeeeeeeeek/electronic-wechat/releases/download/V2.0/linux-x64.tar.gz
+
+解压压缩包
+
+sudo tar zxvf linux-x64.tar.gz 
+
+把解压的文件夹放在/opt下
+
+sudo mv electronic-wechat-linux-x64/ /opt/electronic-wechat-linux-x64
+
+创建终端下的快速启动命令
+
+sudo ln -s /opt/electronic-wechat-linux-x64/electronic-wechat /usr/bin/electronic-wechat
+
+创建在Dash Home下的快速启动图标
+
+#Dash Home的图标一般在两个位置
+/usr/share/applications
+#或者
+~/.local/share/applications（用户独立配置的基本都在这里）
+#只要在一个位置建立图标文件即可
+sudo vi /usr/share/applications/electronic-wechat.desktop
+
+复制代码
+
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Name=Electronic WeChat
+Icon=electronic-wechat.png
+Exec=/opt/electronic-wechat-linux-x64/electronic-wechat
+StartupNotify=false
+StartupWMClass=electronic-wechat
+OnlyShowIn=Unity;
+X-UnityGenerated=true
 =======================================================================================
 ubuntu16.04安装微信:
 https://blog.csdn.net/minione_2016/article/details/53289430?utm_source=blogxgwz0
