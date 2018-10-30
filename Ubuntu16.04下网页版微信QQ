@@ -4,3 +4,56 @@ Ubuntu16.04 下网页版微信，QQ
 微信：https://wx.qq.com/
 
 QQ：http://web2.qq.com/
+
+ubuntu16.04安装微信:
+https://blog.csdn.net/minione_2016/article/details/53289430?utm_source=blogxgwz0
+下载地址:https://github.com/geeeeeeeeek/electronic-wechat/releases  下载64位的
+https://github-production-release-asset-2e65be.s3.amazonaws.com/51994692/1295ca7a-f39b-11e6-98e4-8fbc3227e36d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20181030%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20181030T080631Z&X-Amz-Expires=300&X-Amz-Signature=80a20cd762918a28f035f0bbbd91a9587bd86c27e5517753a957eb2e0efe8e76&X-Amz-SignedHeaders=host&actor_id=35994518&response-content-disposition=attachment%3B%20filename%3Dlinux-x64.tar.gz&response-content-type=application%2Foctet-stream
+安装
+
+tar -xzvf linux-x64.tar.gz
+更改下路径（我一般习惯性放在opt下）
+
+为了方便起见，先把解压的文件夹重命名wechat
+sudo mv -i wechat/ /opt/
+对了，别忘了下载一个微信的png图片直接放进去，为美观的话最好选择微信图标然后透明背景
+设置一下快捷启动
+
+sudo vim /usr/share/applications/wechat.desktop
+
+编辑
+
+[Desktop Entry]  
+
+Name=Wechat  
+
+Comment=wechat  
+
+Exec=/opt/wechat/electronic-wechat  
+
+Icon=/opt/wechat/icon.png  
+
+Terminal=false  
+
+StartupNotify=true  
+
+Type=Application  
+
+Categories=Application;  
+
+    
+Name 无所谓
+Comment 这个必须要和你的文件夹名字相同
+Exec 这个是可执行文件，相当于windows下的exe，这里就是方块文件，如果是.sh文件的话格式为： “路径”%f
+比如： “/opt/pycharm/bin/pycharm.sh”%f
+Icon 图标
+Terminal 感觉这个无所谓，你把true改成wechat貌似也行，不太理解
+Type Application 应用
+Categories Application或者wechat都可以
+
+然后双击打开，再锁定到启动器就可以了
+--------------------- 
+作者：minione_2016 
+来源：CSDN 
+原文：https://blog.csdn.net/minione_2016/article/details/53289430 
+版权声明：本文为博主原创文章，转载请附上博文链接！
