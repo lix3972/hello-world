@@ -1,0 +1,16 @@
+https://blog.csdn.net/weixin_39752599/article/details/82819532
+
+SMPlayer 是免费开源的媒体播放器，内置的解码器，在Linux和Windows下几乎可以播放所有的视频和音频格式。它不需要任何额外的编解码器。只要安装的SMPlayer，你就可以播放所有格式不用麻烦你再安装编解码器安装包。
+
+主要安装步骤有以下三步：
+
+sudo apt-add-repository ppa:rvm/smplayer 
+
+sudo apt-get update
+
+sudo apt-get install smplayer smplayer-skins smplayer-themes 
+--------------------- 
+作者：Blank Jack 
+来源：CSDN 
+原文：https://blog.csdn.net/weixin_39752599/article/details/82819532 
+版权声明：本文为博主原创文章，转载请附上博文链接！
