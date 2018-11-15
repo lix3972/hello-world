@@ -8,3 +8,4 @@
   新建picture文件夹(建议不是必须)，进入picture文件夹，上传图片文件，可以一次选多个。
   点开图片，复制图片对应的网址
   在需要添加图片的行写 ![](),[]中内容自填方便自己阅读，()中填入图片文件的网址。
+  例如：“![formula1](https://github.com/lix3972/papers/blob/master/CycleGan/picture/Lgan.png)”
