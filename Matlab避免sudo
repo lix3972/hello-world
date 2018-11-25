@@ -1,0 +1,1 @@
+为了避免每次都用root权限打开matlab，通过'sudo chown username -R ~/.matlab'改变权限。
