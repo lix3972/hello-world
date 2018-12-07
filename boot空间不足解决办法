@@ -1,0 +1,16 @@
+https://www.linuxidc.com/Linux/2015-05/117401.htm
+Ubuntu下提示/boot空间不足解决办法
+1：
+在终端下察看已经安装的旧的内核：
+ctrl+alt+t——>进入终端——>输入命令：
+
+dpkg --get-selections|grep linux
+
+linux-后面带image的是旧的内核。因为我已经将旧的内核删除了，所以后面显示deinstall，不删除的话是install。
+我们要做的就是将后面带image的Linux内核删除。
+
+2:删除操作：
+
+sudo apt-get remove linux-image-(版本号)（就是上面带image的版本）
+
+有卸载不完全的（有提示），可以用 sudo apt-get autoremove来删除。
