@@ -1,0 +1,23 @@
+git clone 速度慢怎么办？
+2018年03月14日 23:20:38 黎先生你好 阅读数：6074
+版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/DlMmU/article/details/79562021
+
+    进入终端命令行模式，输入
+
+        sudo vim /etc/hosts
+
+    输入i进入编辑命令，英文输入法输入G，vim编辑器跳到hosts文件的最后一行
+
+    用浏览器访问 IPAddress.com or http://tool.chinaz.com 使用 IP Lookup 工具获得github.com和github.global.ssl.fastly.net域名的ip地址
+
+    在vi打开的hosts文件中添加如下格式：
+
+        192.30.253.112 github.com
+        151.101.44.249 github.global.ssl.fastly.net
+
+    esc退出编辑模式，输入：wq，保存hosts文件，修改hosts结束
+
+    更新DNS缓存，输入
+
+        sudo /etc/init.d/networking restart
+
