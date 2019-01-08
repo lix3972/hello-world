@@ -1,0 +1,8 @@
+星际译王（stardict）
+安装：
+sudo apt-get install stardict
+
+进入网站：http://download.huzheng.org/zh_CN/  下载需要的字典，
+sudo tar -xjvf  XXX.tar.bz2  -C /usr/share/stardict/dic
+
+启动词典：stardict
