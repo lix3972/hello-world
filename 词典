@@ -2,7 +2,9 @@
 安装：
 sudo apt-get install stardict
 
-进入网站：http://download.huzheng.org/zh_CN/  下载需要的字典，
+进入网站：http://download.huzheng.org/zh_CN/  下载需要的字典,例如：
+xdict-ec-gb dictionary(en - zh_CN);xdict-ce-gb dictionary(zh_CN - en)
+
 sudo tar -xjvf  XXX.tar.bz2  -C /usr/share/stardict/dic
 
 启动词典：stardict
