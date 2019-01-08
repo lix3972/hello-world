@@ -3,8 +3,16 @@
 sudo apt-get install stardict
 
 进入网站：http://download.huzheng.org/zh_CN/  下载需要的字典,例如：
-xdict-ec-gb dictionary(en - zh_CN);xdict-ce-gb dictionary(zh_CN - en)
+langdao-ec-gb dictionary(en - zh_CN)文件名 ：stardict-langdao-ec-gb-2.4.2.tar.bz2
+langdao-ce-gb dictionary(zh_CN - en)文件名 ：stardict-langdao-ce-gb-2.4.2.tar.bz2
 
 sudo tar -xjvf  XXX.tar.bz2  -C /usr/share/stardict/dic
 
 启动词典：stardict
+===========================================================================
+readme.txt
+sudo tar -xjvf XXX.tar.bz2 -C /usr/share/stardict/dic
+
+stardict-cedict-gb-2.4.2.tar.bz2   	cedict-gb dictionary(zh_CN - en)汉译英      CEDICT LICENCE, 0.7M, 31200 words. 推荐！
+stardict-langdao-ec-gb-2.4.2.tar.bz2	langdao-ec-gb dictionary(en - zh_CN) 朗道英汉字典	GPL, 9.1M, 435468 words. 推荐！
+stardict-langdao-ce-gb-2.4.2.tar.bz2	langdao-ce-gb dictionary(zh_CN - en) 朗道汉英字典	GPL, 7.8M, 405719 words. 推荐！
