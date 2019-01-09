@@ -1,0 +1,50 @@
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+绕过dns解析，在本地直接绑定host，该方法也可加速其他因为CDN被屏蔽导致访问慢的网站。
+hosts文件所在目录，C:\Windows\System32\drivers\etc
+修改windows里的hosts文件，添加如下内容：
+
+# Github
+
+151.101.44.249 github.global.ssl.fastly.net 
+
+192.30.253.113 github.com 
+
+103.245.222.133 assets-cdn.github.com 
+
+23.235.47.133 assets-cdn.github.com 
+
+203.208.39.104 assets-cdn.github.com 
+
+204.232.175.78 documentcloud.github.com 
+
+204.232.175.94 gist.github.com 
+
+107.21.116.220 help.github.com 
+
+207.97.227.252 nodeload.github.com 
+
+199.27.76.130 raw.github.com 
+
+107.22.3.110 status.github.com 
+
+204.232.175.78 training.github.com 
+
+207.97.227.243 www.github.com 
+
+185.31.16.184 github.global.ssl.fastly.net 
+
+185.31.18.133 avatars0.githubusercontent.com 
+
+185.31.19.133 avatars1.githubusercontent.com
+
+192.30.253.120 codeload.github.com
+
+注：保存时要求权限。可先保存至其它位置，然后复制到C:\Windows\System32\drivers\etc
+
+windows下刷新DNS的方法：
+打开cmd
+输入ipconfig /flushdns
+亲测有用，下载速度明显提升
