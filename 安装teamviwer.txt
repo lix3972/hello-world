@@ -8,3 +8,6 @@
 5、打开teamview
 	在终端,输入： teamviewer  (第一次会弹框，点击接受)
 	或者点击桌面左上角搜索栏，搜索teamviewer
+=========================================================================
+Ubuntu16.04.5 desktop 基本配置及远程桌面(未成功)
+https://blog.51cto.com/moerjinrong/2179138?source=dra
