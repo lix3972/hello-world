@@ -1,0 +1,7 @@
+查询pytorch的loss：
+https://www.jianshu.com/p/19226ac68987
+https://blog.csdn.net/zziahgf/article/details/80196376
+https://pytorch.org/docs/stable/nn.html?highlight=bceloss#torch.nn.BCELoss
+
+Tensorflow系列：tf.contrib.layers.batch_norm
+https://blog.csdn.net/qq_30638831/article/details/82877109

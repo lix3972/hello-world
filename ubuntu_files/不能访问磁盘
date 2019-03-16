@@ -1,0 +1,2 @@
+sudo ntfsfix /dev/sdb1
+
