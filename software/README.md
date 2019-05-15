@@ -1,4 +1,4 @@
-#####PDF
+##### PDF
 福昕阅读器: https://www.foxitsoftware.cn/products/reader/  
-#####gimp
+##### gimp
 ubuntu修图
