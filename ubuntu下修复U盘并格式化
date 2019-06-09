@@ -1,0 +1,121 @@
+http://ju.outofmemory.cn/entry/202389
+
+查看和修改分区fdisk：
+可以使用fdiks查看和修改分区，这里作者就是通过o命令来重置的分区表。 
+cstriker1407@cstriker1407-x64:~$ sudo fdisk -l #查看当前分区
+
+Disk /dev/sda: 931.5 GiB, 1000204886016 bytes, 1953525168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x5fb120da
+
+Device     Boot    Start        End    Sectors   Size Id Type
+/dev/sda1           2048   19531775   19529728   9.3G 82 Linux swap / Solaris
+/dev/sda2  *    19531776 1953523711 1933991936 922.2G 83 Linux
+
+Disk /dev/sdb: 7.5 GiB, 8011087872 bytes, 15646656 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x4a022e4f
+
+Device     Boot Start      End  Sectors  Size Id Type
+/dev/sdb1        2048 15646655 15644608  7.5G 83 Linux
+
+cstriker1407@cstriker1407-x64:~$ sudo fdisk /dev/sdb1 #选中U盘分区
+
+Welcome to fdisk (util-linux 2.25.2).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+命令(输入 m 获取帮助)： m #使用m命令查看
+
+Help:
+
+  DOS (MBR)
+   a   toggle a bootable flag
+   b   edit nested BSD disklabel
+   c   toggle the dos compatibility flag
+
+  Generic
+   d   delete a partition  #删除分区
+   l   list known partition types #查看支持的分区类型
+   n   add a new partition  #新建一个分区
+   p   print the partition table #打印当前分区表
+   t   change a partition type  #更改分区类型
+   v   verify the partition table #校验分区表
+
+  Misc
+   m   print this menu
+   u   change display/entry units
+   x   extra functionality (experts only)
+
+  Save & Exit
+   w   write table to disk and exit #保存分区并退出
+   q   quit without saving changes
+
+  Create a new label
+   g   create a new empty GPT partition table
+   G   create a new empty SGI (IRIX) partition table
+   o   create a new empty DOS partition table
+   s   create a new empty Sun partition table  
+   
+ 格式为NTFS：  
+ cstriker1407@cstriker1407-x64:~$ sudo mkfs.ntfs -f /dev/sdb1 -L MyUSB  #使用mkfs.ntfs对U盘进行格式化
+cstriker1407@cstriker1407-x64:~$ sudo mkfs -t ntfs /dev/sdb1  #使用mkfs对U盘进行格式化
+
+cstriker1407@cstriker1407-x64:~$ mkfs  #mkfs使用帮助
+用法：
+ mkfs [options] [-t <type>] [fs-options] <device> [<size>]
+
+选项：
+ -t, --type=<type>  filesystem type; when unspecified, ext2 is used
+     fs-options     parameters for the real filesystem builder
+     <device>       path to the device to be used
+     <size>         number of blocks to be used on the device
+ -V, --verbose      explain what is being done;
+                      specifying -V more than once will cause a dry-run
+ -V, --version      display version information and exit;
+                      -V as --version must be the only option
+ -h, --help         display this help text and exit
+
+For more information see mkfs(8).
+
+cstriker1407@cstriker1407-x64:~$ mkfs.ntfs #mkfs.ntfs使用帮助
+
+Usage: mkntfs [options] device [number-of-sectors]
+
+Basic options:
+    -f, --fast                      Perform a quick format
+    -Q, --quick                     Perform a quick format
+    -L, --label STRING              Set the volume label
+    -C, --enable-compression        Enable compression on the volume
+    -I, --no-indexing               Disable indexing on the volume
+    -n, --no-action                 Do not write to disk
+
+Advanced options:
+    -c, --cluster-size BYTES        Specify the cluster size for the volume
+    -s, --sector-size BYTES         Specify the sector size for the device
+    -p, --partition-start SECTOR    Specify the partition start sector
+    -H, --heads NUM                 Specify the number of heads
+    -S, --sectors-per-track NUM     Specify the number of sectors per track
+    -z, --mft-zone-multiplier NUM   Set the MFT zone multiplier
+    -T, --zero-time                 Fake the time to be 00:00 UTC, Jan 1, 1970
+    -F, --force                     Force execution despite errors
+
+Output options:
+    -q, --quiet                     Quiet execution
+    -v, --verbose                   Verbose execution
+        --debug                     Very verbose execution
+
+Help options:
+    -V, --version                   Display version
+    -l, --license                   Display licensing information
+    -h, --help                      Display this help
+
+Developers' email address: ntfs-3g-devel@lists.sf.net
+News, support and information:  http://tuxera.com
