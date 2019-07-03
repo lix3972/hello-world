@@ -1,0 +1,5 @@
+安装 aconda 后ubuntu系统终端界面前部出现（base）字样
+原因：aconda自动加入了命令到 .bashrc中，打开终端时自动执行了   conda  activate base 命令
+解决方案：使用命令 conda deactivate 可以去掉，但只限当前终端。将命令添加到～/.bashrc。
+1.打开终端 ，输入命令：gedit ～/.bashrc
+2.在 .bashrc文件最后面添加命令：conda deactivate
