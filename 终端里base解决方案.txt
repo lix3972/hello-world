@@ -1,5 +1,24 @@
 安装 aconda 后ubuntu系统终端界面前部出现（base）字样
 原因：aconda自动加入了命令到 .bashrc中，打开终端时自动执行了   conda  activate base 命令
-解决方案：使用命令 conda deactivate 可以去掉，但只限当前终端。将命令添加到～/.bashrc。
-1.打开终端 ，输入命令：gedit ～/.bashrc
-2.在 .bashrc文件最后面添加命令：conda deactivate
+解决方案：
+    打开终端 ，输入命令：gedit ～/.bashrc，注释掉conda initialize,添加export PATH="/home/t/anaconda3/bin:$PATH"。
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/home/t/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/t/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/t/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/t/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# <<< conda initialize <<<
+# conda deactivate
+export PATH="/home/t/anaconda3/bin:$PATH"
+
+====================================================================
+使用命令 conda deactivate 可以去掉，但只限当前终端。将命令添加到～/.bashrc。但是没有conda环境了，python版本会变为系统默认的2.7。
+打开终端 ，输入命令：gedit ～/.bashrc 在 .bashrc文件最后面添加命令：conda deactivate
