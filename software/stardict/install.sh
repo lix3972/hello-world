@@ -9,3 +9,4 @@ sudo tar -xjvf stardict-powerword2011_1_901-2.4.2.tar.bz2 -C /usr/share/stardict
 sudo tar -xjvf stardict-xdict-ce-gb-2.4.2.tar.bz2 -C /usr/share/stardict/dic
 sudo tar -xjvf stardict-xdict-ce-gb_fix-2.4.2.tar.bz2 -C /usr/share/stardict/dic
 sudo tar -xjvf stardict-xdict-ec-gb-2.4.2.tar.bz2 -C /usr/share/stardict/dic
+sudo tar -xjvf stardict-xdict-ec-gb_fix-2.4.2.tar.bz2 -C /usr/share/stardict/dic
