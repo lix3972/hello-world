@@ -5,3 +5,5 @@ gimp ：sudo apt install gimp
 ##### 3、Pycharm
 for conda: https://www.jetbrains.com/pycharm/download/download-thanks.html?code=PCC&platform=linuxAnaconda
 download Toobbox App: https://www.jetbrains.com/toolbox/app/
+##### 4、stardict(翻译)
+sudo apt-get install stardict
