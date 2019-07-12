@@ -1,0 +1,5 @@
+1.在 Ubuntu 上挂载exFAT磁盘时出现问题
+  sudo apt install exfat-fuse exfat-utils
+2.在Ubuntu上挂载NTFS
+sudo ntfsfix /dev/sda1  # 路径要看具体对应的磁盘
+如果需要安装ntfs修故软件：sudo apt-get install ntfs-3g
