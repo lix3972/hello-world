@@ -1,0 +1,16 @@
+知道用哪个“量产工具”后，就不必再用chipGenius或chipeasy查看主控了。
+1、使用“ChipGenius” 查看“主控型号”，根据给出的网址，下载对应的“量产工具”，根据网页提示或readme提示，完成U盘修复。修复完成，拔出u盘在插一次。
+2、下载的PS2251-03主控的量产工具，解压，运行"救砖神器.exe",点"update"找到u盘，点"Setting"->在"Setting Type"框中，选"Advance Setting"和"Load Last Setting" ->"ok"
+
+3、修复过程中出现is legacy flash 0x1060错误，点高级设置中“Flask Setting”->"Production Flash"下的选项改为"Legacy"，修复成功。
+注：修改设置后，注意重新勾选"救砖tlc.ini". 修复另一个u盘时，VID和PID与默认设置不同，不用修改，否则会出很多错误。
+netac U盘 
+芯片制造商:  群联(Phison)
+芯片型号  :  PS2251-03
+闪存颗粒  :  东芝(Toshiba) 闪存类型:  TLC  
+闪存识别码:  983AA892      (打开网络可以获取详细信息)
+固件版本  :  01.06.53      固件日期:  2013.05.16
+
+如果"量产工具"不能识别u盘，需要进行"短接"：
+打开u盘外壳，短接FLASH芯片的29和30角。在u盘通电前短接好，然后插上u盘，点量产工具的update,找到u盘后，松开短接线。两侧都有FLASH的，短接有主控芯片的那一面，或两面都试试。
+参考：http://www.upantool.com/jiaocheng/liangchan/2011/upan_duanjie.html
