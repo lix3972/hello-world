@@ -8,6 +8,6 @@ download Toobbox App: https://www.jetbrains.com/toolbox/app/
 ##### 4、stardict(翻译)
 sudo apt-get install stardict  
 ##### 5、LaTex
-sudo apt-get install texlive-full  # 安装官方的 TeX 系统
-sudo apt-get install texstudio     # 安装图形化界面
-搜索应用TeXstudio打开可视化界面
+sudo apt-get install texlive-full  # 安装官方的 TeX 系统  
+sudo apt-get install texstudio     # 安装图形化界面  
+搜索应用TeXstudio打开可视化界面  
