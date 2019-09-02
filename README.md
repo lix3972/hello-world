@@ -19,3 +19,4 @@ junyanz/pytorch-CycleGAN-and-pix2pix
 https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix  
 ##### 可能参考的code 计算机视觉和模式识别的code 
 有点旧(2014) https://blog.csdn.net/huixingshao/article/details/41944453  
+机器学习数据集汇总：附下载地址https://blog.csdn.net/mars_xiaolei/article/details/79419058  
