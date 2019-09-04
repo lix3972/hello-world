@@ -11,6 +11,9 @@ https://guides.github.com/activities/hello-world/
 ##### 五级标题
 ###### 六级标题
 ####### 没有更多标题了
+# 移动文件
+思路：可以通过修改相对路径的方法调整文件所在的文件夹。在修改文件时，在文件名前加点"."
+
 ##### 人脸戴眼镜
 spatial transform GAN   
 https://github.com/chenhsuanlin/spatial-transformer-GAN.git
