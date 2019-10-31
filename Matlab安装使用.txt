@@ -1,0 +1,6 @@
+1、打开matlab(不用输入路径)
+sudo gedit ~/.bashrc  # 在终端输入
+export PATH="/usr/local/MATLAB/R2017b/bin:$PATH"  # 在打开的文件最后一行输入并保存。
+关闭终端再打开(保存设置),输入matlab直接打开。
+2、如果打开matlab需要权限(可能安装时权限没设置好)
+为了避免每次都用root权限打开matlab，通过'sudo chown username -R ~/.matlab'改变权限。
