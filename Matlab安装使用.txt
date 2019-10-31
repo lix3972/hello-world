@@ -2,5 +2,12 @@
 sudo gedit ~/.bashrc  # 在终端输入
 export PATH="/usr/local/MATLAB/R2017b/bin:$PATH"  # 在打开的文件最后一行输入并保存。
 关闭终端再打开(保存设置),输入matlab直接打开。
+
 2、如果打开matlab需要权限(可能安装时权限没设置好)
 为了避免每次都用root权限打开matlab，通过'sudo chown username -R ~/.matlab'改变权限。
+
+3、在matlab中添加路径需要权限或添加的路径无法保存
+原因：pathdef.m文件的权限问题
+解决方法：去掉pathdef.m的权限
+cd /usr/local/MATLAB/R2017a/toolbox/local  # 进入matlab安装位置下的pathdef.m,可能在matlab文件夹中的toolbox/local
+sudo chmod 777 pathdef.m
