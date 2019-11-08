@@ -9,15 +9,7 @@ https://guides.github.com/activities/hello-world/
 stackoverflow.com  
 StackOverflow中文参考 https://www.soinside.com/
 
-# 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-####### 没有更多标题了
-# 文件位置调整
-在修改文件状态下，光标在文件名左侧，退格键(Backspace)可以删改路径。改完路径然后保存，会将该文件移动到修改后的路径下,原路径下的该文件消失。如果文件夹中没有文件，则自动删除文件夹。
+
 
 ##### 人脸戴眼镜
 spatial transform GAN   
