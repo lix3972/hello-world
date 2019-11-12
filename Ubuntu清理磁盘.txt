@@ -1,0 +1,3 @@
+1.磁盘使用情况分析器，清理磁盘
+
+2.清理缩略图： 查看du -sh ~/.cache/thumbnails; 删除 rm -rf ~/.cache/thumbnails/*
