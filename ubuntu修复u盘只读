@@ -1,0 +1,21 @@
+1 首先插入U盘。打开命令行，执行如下指令：
+df -h
+显示出所有挂载的硬盘U盘的信息
+可以看到，例如：U盘的文件系统是/dev/sdb1，挂载点是/media/admin/MyUDisk
+2 卸载U盘
+
+sudo umount /media/admin/MyUDisk
+
+卸载之后不要拔掉U盘！
+
+3 修复U盘文件系统故障
+
+sudo dosfsck -v -a /dev/sdb1
+
+注意：这里的/dev/sdb1只是举例，请以实际情况为准！
+这条指令的执行时间不定，可能很快完成，也可能花费几分钟，请耐心等待。
+
+重新挂载U盘，即可检验是否已修复。
+————————————————
+版权声明：本文为CSDN博主「danmeng8068」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/danmeng8068/article/details/80054235
