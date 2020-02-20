@@ -11,3 +11,6 @@ export PATH="/usr/local/MATLAB/R2017b/bin:$PATH"  # 在打开的文件最后一�
 解决方法：去掉pathdef.m的权限
 cd /usr/local/MATLAB/R2017a/toolbox/local  # 进入matlab安装位置下的pathdef.m,可能在matlab文件夹中的toolbox/local
 sudo chmod 777 pathdef.m
+
+4、快捷键设置  
+matlab=>主页=>Parallel(环境)=>Parallel Preferences=>预设项对话框：MATLAB=>键盘=>快捷方式=>活动设置=>下拉选择Windows默认集
