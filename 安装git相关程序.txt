@@ -1,0 +1,6 @@
+ pip install git+https://github.com/cocodataset/panopticapi.git
+出错，有的说 没有安装git的原因，使用conda install git 安装了git
+
+发现报错下边有提示：You should consider upgrading via the '/usr/bin/python3.8 -m pip install --upgrade pip' command.
+运行pip install --upgrade pip 后
+pip install git+https://github.com/cocodataset/panopticapi.git成功
